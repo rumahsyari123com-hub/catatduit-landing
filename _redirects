@@ -1,0 +1,4 @@
+/login       https://cttn.abinezidna.net/login       302
+/register   https://cttn.abinezidna.net/register    302
+/dashboard  https://cttn.abinezidna.net/dashboard   302
+/*          /index.html                             200

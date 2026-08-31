@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CatatDuit — Catat Santuy, Duit Lancar</title>
+  <meta name="description" content="SaaS keuangan personal & zakat maal otomatis dari neraca" />
+
+  <!-- Favicon (inline SVG, logo CatatDuit) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231B5E4F'/%3E%3Cpath d='M16 4v24M21 7H12.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H10' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231B5E4F'/%3E%3Cpath d='M16 4v24M21 7H12.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H10' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#1B5E4F" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CatatDuit — Catat Santuy, Duit Lancar" />
+  <meta property="og:description" content="SaaS keuangan personal & zakat maal otomatis dari neraca. Tracking haul 354 hari & nisab emas/perak." />
+  <meta property="og:site_name" content="CatatDuit" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%23F7F5F0'/%3E%3Crect x='100' y='80' width='64' height='64' rx='16' fill='%231B5E4F'/%3E%3Cpath d='M132 90v44M142 96H126a7 7 0 0 0 0 14h10a7 7 0 0 1 0 14H122' stroke='white' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Ctext x='180' y='128' font-family='Playfair Display,serif' font-size='40' font-weight='700' fill='%231C1917'%3ECatatDuit%3C/text%3E%3Ctext x='100' y='320' font-family='Playfair Display,serif' font-size='72' font-weight='700' fill='%231C1917'%3ECatat Santuy,%3C/text%3E%3Ctext x='100' y='400' font-family='Playfair Display,serif' font-size='72' font-weight='700' fill='%231B5E4F'%3EDuit Lancar,%3C/text%3E%3Ctext x='100' y='480' font-family='Playfair Display,serif' font-size='72' font-weight='700' fill='%231C1917'%3EZakat Beres.%3C/text%3E%3C/svg%3E" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CatatDuit — Catat Santuy, Duit Lancar" />
+  <meta name="twitter:description" content="SaaS keuangan personal & zakat maal otomatis dari neraca. Tracking haul 354 hari & nisab emas/perak." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#F7F5F0;--surface:#FFFFFF;--primary:#1B5E4F;--primary-dark:#144D42;
+      --accent:#C8952E;--accent-light:#D4A84A;--accent-dark:#A87C25;
+      --text:#1C1917;--muted:#78716C;--border:#E7E5E4;--success:#15803D;
+      --danger:#B91C1C;
+      --font-display:'Playfair Display',serif;--font-body:'DM Sans',sans-serif;
+      --font-mono:'JetBrains Mono',monospace;
+      --shadow:0 1px 3px rgba(0,0,0,.04),0 1px 2px rgba(0,0,0,.06);
+      --shadow-md:0 4px 6px rgba(0,0,0,.04),0 2px 4px rgba(0,0,0,.06);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:72rem;margin:0 auto;padding:0 1rem}
+    @media(min-width:640px){.container{padding:0 1.5rem}}
+
+    /* Header */
+    .header{position:sticky;top:0;z-index:20;background:rgba(247,245,240,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+    .logo{display:flex;align-items:center;gap:.5rem}
+    .logo-icon{width:2rem;height:2rem;border-radius:.75rem;background:var(--primary);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .logo-icon svg{width:1rem;height:1rem}
+    .logo-text{font-family:var(--font-display);font-weight:700;font-size:1.125rem}
+    @media(min-width:640px){.logo-text{font-size:1.25rem}}
+    .nav{display:flex;align-items:center;gap:.5rem}
+    @media(min-width:640px){.nav{gap:.75rem}}
+    .btn-ghost{padding:.375rem .75rem;border-radius:.75rem;font-size:.75rem;font-weight:500;transition:all .15s;border:1px solid transparent}
+    @media(min-width:640px){.btn-ghost{padding:.5rem 1rem;font-size:.875rem}}
+    .btn-ghost:hover{background:#fff;border-color:var(--border)}
+    .btn-primary{padding:.375rem .75rem;border-radius:.75rem;background:var(--primary);color:#fff;font-size:.75rem;font-weight:500;transition:background .15s}
+    @media(min-width:640px){.btn-primary{padding:.5rem 1.25rem;font-size:.875rem}}
+    .btn-primary:hover{background:var(--primary-dark)}
+    .btn-accent{padding:.625rem 1.25rem;border-radius:.75rem;background:var(--accent);color:#fff;font-weight:600;font-size:.875rem;transition:background .15s;text-align:center}
+    .btn-accent:hover{background:var(--accent-dark)}
+    .btn-outline{padding:.625rem 1.25rem;border-radius:.75rem;background:#fff;border:1px solid var(--border);font-weight:500;font-size:.875rem;transition:all .15s;text-align:center}
+    .btn-outline:hover{background:var(--bg)}
+
+    /* Hero */
+    .hero{padding:2rem 0}
+    @media(min-width:768px){.hero{padding:3rem 0 4rem}}
+    .hero-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;align-items:center}
+    @media(min-width:768px){.hero-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
+    .hero-eyebrow{font-size:.625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+    @media(min-width:640px){.hero-eyebrow{font-size:.75rem}}
+    .hero-title{font-family:var(--font-display);font-size:1.875rem;font-weight:700;line-height:1.15;margin-top:.5rem}
+    @media(min-width:640px){.hero-title{font-size:2.25rem}}
+    @media(min-width:768px){.hero-title{font-size:3rem}}
+    .hero-title .green{color:var(--primary)}
+    .hero-desc{font-size:.875rem;color:var(--muted);margin-top:.75rem;line-height:1.7}
+    @media(min-width:640px){.hero-desc{font-size:1rem;margin-top:1rem}}
+    .hero-desc b{color:var(--text)}
+    .hero-cta{display:flex;flex-direction:column;gap:.5rem;margin-top:1.25rem}
+    @media(min-width:640px){.hero-cta{flex-direction:row;gap:.75rem;margin-top:1.5rem}}
+
+    /* Preview Card */
+    .preview-card{background:#fff;border-radius:1rem;padding:1rem;box-shadow:var(--shadow);border:1px solid var(--border);width:100%}
+    @media(min-width:640px){.preview-card{padding:1.5rem}}
+    .preview-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem}
+    @media(min-width:640px){.preview-header{margin-bottom:1rem}}
+    .preview-title{font-weight:600;font-size:.875rem}
+    @media(min-width:640px){.preview-title{font-size:1rem}}
+    .badge-live{font-size:.625rem;background:rgba(27,94,79,.1);color:var(--primary);padding:.125rem .5rem;border-radius:9999px;font-weight:600}
+    @media(min-width:640px){.badge-live{font-size:.75rem}}
+    .badge-live::before{content:"";display:inline-block;width:.375rem;height:.375rem;border-radius:9999px;background:var(--success);margin-right:.25rem;animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+    .metrics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;text-align:center}
+    @media(min-width:640px){.metrics-grid{gap:.75rem}}
+    .metric{background:var(--bg);border-radius:.75rem;padding:.5rem}
+    @media(min-width:640px){.metric{padding:.75rem}}
+    .metric-label{font-size:.625rem;color:var(--muted)}
+    @media(min-width:640px){.metric-label{font-size:.688rem}}
+    .metric-value{font-family:var(--font-mono);font-weight:700;font-size:.75rem;margin-top:.125rem}
+    @media(min-width:640px){.metric-value{font-size:.875rem}}
+    .metric-highlight{border:2px solid rgba(200,149,46,.3)}
+    .metric-highlight .metric-value{color:var(--success)}
+    .zakat-box{margin-top:.75rem;padding:.75rem;border-radius:.75rem;background:rgba(200,149,46,.1);border:1px solid rgba(200,149,46,.2)}
+    @media(min-width:640px){.zakat-box{margin-top:1rem;padding:1rem}}
+    .zakat-box .zakat-amount{font-size:.875rem;font-weight:600}
+    @media(min-width:640px){.zakat-box .zakat-amount{font-size:1rem}}
+    .zakat-box .zakat-note{font-size:.625rem;color:var(--muted);margin-top:.25rem}
+    @media(min-width:640px){.zakat-box .zakat-note{font-size:.75rem}}
+
+    /* Features */
+    .features{background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2rem 0}
+    @media(min-width:768px){.features{padding:3.5rem 0}}
+    .features-title{font-family:var(--font-display);font-size:1.25rem;font-weight:700;text-align:center}
+    @media(min-width:640px){.features-title{font-size:1.5rem}}
+    .features-subtitle{text-align:center;font-size:.875rem;color:var(--muted);margin-top:.25rem}
+    @media(min-width:640px){.features-subtitle{font-size:1rem;margin-top:.5rem}}
+    .features-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem}
+    @media(min-width:640px){.features-grid{grid-template-columns:repeat(2,1fr);gap:1.25rem}}
+    @media(min-width:768px){.features-grid{grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem}}
+    .feature-card{border-radius:1rem;border:1px solid var(--border);padding:1.25rem;transition:box-shadow .2s}
+    @media(min-width:640px){.feature-card{padding:1.25rem}}
+    .feature-card:hover{box-shadow:var(--shadow-md)}
+    .feature-icon{width:2.25rem;height:2.25rem;border-radius:.75rem;background:rgba(27,94,79,.1);display:flex;align-items:center;justify-content:center;font-size:1.125rem}
+    @media(min-width:640px){.feature-icon{width:2.5rem;height:2.5rem;font-size:1.125rem}}
+    .feature-title{font-weight:600;margin-top:.75rem;font-size:.875rem}
+    @media(min-width:640px){.feature-title{font-size:1rem;margin-top:.75rem}}
+    .feature-desc{font-size:.75rem;color:var(--muted);margin-top:.25rem;line-height:1.7}
+    @media(min-width:640px){.feature-desc{font-size:.875rem}}
+
+    /* CTA */
+    .cta-section{padding:2rem 0}
+    @media(min-width:768px){.cta-section{padding:3.5rem 0}}
+    .cta-box{border-radius:1rem;background:var(--primary);color:#fff;padding:1.5rem;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:1rem}
+    @media(min-width:768px){.cta-box{flex-direction:row;padding:2.5rem;gap:1.5rem}}
+    .cta-title{font-family:var(--font-display);font-size:1.25rem;font-weight:700}
+    @media(min-width:640px){.cta-title{font-size:1.5rem}}
+    .cta-desc{color:rgba(255,255,255,.8);margin-top:.25rem;font-size:.875rem}
+    @media(min-width:640px){.cta-desc{font-size:1rem}}
+    .cta-buttons{display:flex;flex-direction:column;gap:.5rem;width:100%}
+    @media(min-width:640px){.cta-buttons{flex-direction:row;gap:.75rem;width:auto}}
+    .cta-box .btn-accent{width:100%}
+    @media(min-width:640px){.cta-box .btn-accent{width:auto}}
+    .btn-white{padding:.625rem 1.5rem;border-radius:.75rem;background:#fff;color:var(--primary);font-weight:600;font-size:.875rem;text-align:center;width:100%}
+    @media(min-width:640px){.btn-white{width:auto}}
+    .footer{text-align:center;font-size:.625rem;color:#A8A29E;margin-top:1rem}
+    @media(min-width:640px){.footer{font-size:.75rem;margin-top:1.5rem}}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <span class="logo-text">CatatDuit</span>
+      </div>
+      <nav class="nav">
+        <a href="/login" class="btn-ghost">Masuk</a>
+        <a href="/register" class="btn-primary">Daftar Gratis</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div style="text-align:center" class="hero-content">
+        <p class="hero-eyebrow">Keuangan Personal &amp; Zakat</p>
+        <h1 class="hero-title">
+          Catat Santuy,<br/>
+          <span class="green">Duit Lancar,</span><br/>
+          Zakat Beres.
+        </h1>
+        <p class="hero-desc">
+          Laporan Keuangan Personal yang menghitung <b>zakat maal otomatis dari neraca</b> + tracking haul 354 hari &amp; nisab emas/perak — bukan input manual lagi.
+        </p>
+        <div class="hero-cta">
+          <a href="/register" class="btn-accent">Mulai Gratis →</a>
+          <a href="/dashboard" class="btn-outline">Lihat Dashboard</a>
+        </div>
+      </div>
+      <div class="preview-card">
+        <div class="preview-header">
+          <h3 class="preview-title">Preview Neraca</h3>
+          <span class="badge-live">Live</span>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric"><p class="metric-label">Total Aset</p><p class="metric-value">Rp 60Jt</p></div>
+          <div class="metric"><p class="metric-label">Hutang</p><p class="metric-value">Rp 10Jt</p></div>
+          <div class="metric metric-highlight"><p class="metric-label">Kekayaan Bersih</p><p class="metric-value">Rp 50Jt</p></div>
+        </div>
+        <div class="zakat-box">
+          <p class="zakat-amount">Zakat Maal 2,5% = Rp 1.250.000</p>
+          <p class="zakat-note">(Modal × 2,5% jika ≥ nisab &amp; haul 354 hari)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="container">
+      <h2 class="features-title">Kenapa CatatDuit Beda?</h2>
+      <p class="features-subtitle">6 keunggulan yang tidak ada di app keuangan biasa</p>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">💰</div><h3 class="feature-title">Zakat Maal Otomatis dari Neraca</h3><p class="feature-desc">(Aset − Hutang Jatuh Tempo) × 2,5%. Tidak perlu hitung manual lagi. Kolom penyesuaian untuk emas/perak &amp; hutang tambahan.</p></div>
+        <div class="feature-card"><div class="feature-icon">📅</div><h3 class="feature-title">Nisab &amp; Haul Tracking</h3><p class="feature-desc">Nisab emas 85g &amp; perak 672g update harga spot. Haul 354 hari hijriah tercatat otomatis + reminder.</p></div>
+        <div class="feature-card"><div class="feature-icon">📒</div><h3 class="feature-title">Double-Entry Akuntansi</h3><p class="feature-desc">Jurnal, Buku Besar, Neraca klasik dengan debit/kredit seimbang. Rapi kayak laporan kantor.</p></div>
+        <div class="feature-card"><div class="feature-icon">🏦</div><h3 class="feature-title">Multi-Akun Personal</h3><p class="feature-desc">Kas, E-money, Bank, Piutang, Persediaan, Emas. Pisah kantong tapi 1 dashboard.</p></div>
+        <div class="feature-card"><div class="feature-icon">🕌</div><h3 class="feature-title">Islami &amp; Lokal</h3><p class="feature-desc">Full Bahasa Indonesia dengan infak/sedekah/wakaf goal-based.</p></div>
+        <div class="feature-card"><div class="feature-icon">🔒</div><h3 class="feature-title">Private &amp; Aman</h3><p class="feature-desc">kamu cuma lihat data kamu sendiri untuk keperluan pencatatan keuangan yang lebih baik</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div style="text-align:center" class="cta-text">
+          <h3 class="cta-title">Siap rapikan keuangan &amp; zakat?</h3>
+          <p class="cta-desc">Daftar 1 menit, langsung pakai neraca + kalkulator zakat.</p>
+        </div>
+        <div class="cta-buttons">
+          <a href="/register" class="btn-accent">Daftar</a>
+          <a href="/login" class="btn-white">Masuk</a>
+        </div>
+      </div>
+      <p class="footer">© 2026 CatatDuit by Degriya Partner</p>
+    </div>
+  </section>
+</body>
+</html>
