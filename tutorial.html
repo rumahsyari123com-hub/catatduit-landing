@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial CatatDuit — Panduan Lengkap — Tutorial CatatDuit</title>
+  <meta name="description" content="Dokumentasi lengkap CatatDuit: cara daftar, memahami akun, mencatat transaksi, membaca laporan keuangan, menghitung zakat maal, nishab & haul, hingga fitur Pro. Gratis tanpa login." />
+  <link rel="canonical" href="https://catatduit.web.id/tutorial" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon%20catatduit.png" />
+  <link rel="apple-touch-icon" href="/favicon%20catatduit.png" />
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#1B5E4F" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Tutorial CatatDuit — Panduan Lengkap — Tutorial CatatDuit" />
+  <meta property="og:description" content="Dokumentasi lengkap CatatDuit: cara daftar, memahami akun, mencatat transaksi, membaca laporan keuangan, menghitung zakat maal, nishab & haul, hingga fitur Pro. Gratis tanpa login." />
+  <meta property="og:url" content="https://catatduit.web.id/tutorial" />
+  <meta property="og:site_name" content="CatatDuit" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:image" content="https://catatduit.web.id/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tutorial CatatDuit — Panduan Lengkap — Tutorial CatatDuit" />
+  <meta name="twitter:description" content="Dokumentasi lengkap CatatDuit: cara daftar, memahami akun, mencatat transaksi, membaca laporan keuangan, menghitung zakat maal, nishab & haul, hingga fitur Pro. Gratis tanpa login." />
+  <meta name="twitter:image" content="https://catatduit.web.id/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","url":"https://catatduit.web.id/tutorial","name":"Tutorial CatatDuit — Panduan Lengkap","inLanguage":"id-ID","isPartOf":{"@type":"WebSite","name":"CatatDuit","url":"https://catatduit.web.id"},"primaryImageOfPage":"https://catatduit.web.id/og-image.png"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://catatduit.web.id/"},{"@type":"ListItem","position":2,"name":"Tutorial","item":"https://catatduit.web.id/tutorial"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","url":"https://catatduit.web.id/tutorial#faq","inLanguage":"id-ID","mainEntity":[
+    {"@type":"Question","name":"Apakah data keuangan saya aman?","acceptedAnswer":{"@type":"Answer","text":"Data setiap pengguna terisolasi di tingkat database (row-level security): hanya akunmu yang bisa membacanya. Password disimpan ter-enkripsi, dan kamu bisa mengakhiri sesi perangkat lain dari Pengaturan → Keamanan."}},
+    {"@type":"Question","name":"Apa bedanya zakat maal dan zakat fitrah?","acceptedAnswer":{"@type":"Answer","text":"Zakat maal dihitung dari harta (2,5%, wajib setelah nishab + haul 354 hari) dan dihitung otomatis CatatDuit dari pembukuanmu. Zakat fitrah dihitung per jiwa yang berpuasa di Ramadhan (sekitar 2,5 kg beras atau uang senilai), dibayar sebelum Idul Fitri."}},
+    {"@type":"Question","name":"Pinjaman jangka panjang saya dihitung mengurangi zakat?","acceptedAnswer":{"@type":"Answer","text":"Tidak. Yang mengurangi zakat hanya hutang jatuh tempo (kewajiban yang wajib dibayar dalam waktu dekat), misalnya hutang ke supplier yang jatuh tempo bulan ini. Pinjaman jangka panjang yang belum jatuh tempo tidak masuk hitungan."}},
+    {"@type":"Question","name":"Kenapa zakat saya Rp 0 padahal harta banyak?","acceptedAnswer":{"@type":"Answer","text":"Ada dua syarat yang dicek sistem: nishab dan haul. Jika progress bar belum 100%, hartamu belum lewat nishab. Jika progress 100% tapi zakat Rp 0, berarti haul belum genap 354 hari — atau tanggal nishab belum dikunci di menu Nishob & Haul."}},
+    {"@type":"Question","name":"Bagaimana jika harga emas berubah?","acceptedAnswer":{"@type":"Answer","text":"Nishab mengikuti harga terbaru yang terpasang. Cukup perbarui angkanya di Nishob & Haul → Input Harga Nishob lalu simpan; perhitungan di semua halaman langsung menyesuaikan. Tidak yakin dengan angka sendiri? Reset ke Sistem."}},
+    {"@type":"Question","name":"Bisa dipakai untuk usaha, bukan hanya pribadi?","acceptedAnswer":{"@type":"Answer","text":"Bisa. Stok barang dagangan, piutang pelanggan, dan hutang supplier sudah disediakan sebagai akun bawaan. Pemilik toko online biasanya mencatat omzet via Penjualan Tunai/Piutang Baru, restok via Beli Persediaan, dan membaca Laba Rugi tiap bulan."}},
+    {"@type":"Question","name":"Saya salah mencatat transaksi, bagaimana?","acceptedAnswer":{"@type":"Answer","text":"Buka Jurnal, cari barisnya, klik ikon edit untuk mengubah nominal/keterangan atau ikon hapus untuk menghapus. Laporan dan angka zakat ikut menyesuaikan otomatis karena semuanya dihitung dari jurnal."}},
+    {"@type":"Question","name":"Apakah CatatDuit gratis?","acceptedAnswer":{"@type":"Answer","text":"Ada paket gratis selamanya: dashboard, jurnal (maks 100 baris/bulan), neraca, zakat maal, dan tracking haul. Paket Pro mulai Rp 17.000/bulan membuka Buku Besar, Laba Rugi, Arus Kas, dan jurnal unlimited."}},
+    {"@type":"Question","name":"Bagaimana cara membayar langganan Pro?","acceptedAnswer":{"@type":"Answer","text":"Via QRIS — pilih durasi (1/3/6/12 bulan), klik Order Now, scan QRIS dengan aplikasi bank atau e-money apa pun. Status Pro aktif otomatis setelah pembayaran terverifikasi, invoice tampil di Pengaturan → Tagihan."}}
+  ]}
+  </script>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#F7F5F0;--surface:#FFFFFF;--primary:#1B5E4F;--primary-dark:#144D42;
+      --accent:#C8952E;--accent-light:#D4A84A;--accent-dark:#A87C25;
+      --text:#1C1917;--muted:#78716C;--border:#E7E5E4;--success:#15803D;
+      --danger:#B91C1C;
+      --font-display:'Playfair Display',serif;--font-body:'DM Sans',sans-serif;
+      --font-mono:'JetBrains Mono',monospace;
+      --shadow:0 1px 3px rgba(0,0,0,.04),0 1px 2px rgba(0,0,0,.06);
+      --shadow-md:0 4px 6px rgba(0,0,0,.04),0 2px 4px rgba(0,0,0,.06);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:56rem;margin:0 auto;padding:0 1rem}
+    @media(min-width:640px){.container{padding:0 1.5rem}}
+
+    /* Header (sama seperti landing) */
+    .header{position:sticky;top:0;z-index:20;background:rgba(247,245,240,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+    .logo{display:flex;align-items:center;gap:.5rem}
+    .logo-text{font-family:var(--font-display);font-weight:700;font-size:1.125rem}
+    @media(min-width:640px){.logo-text{font-size:1.25rem}}
+    .nav{display:flex;align-items:center;gap:.5rem}
+    @media(min-width:640px){.nav{gap:.75rem}}
+    .btn-ghost{padding:.375rem .75rem;border-radius:.75rem;font-size:.75rem;font-weight:500;transition:all .15s;border:1px solid transparent}
+    @media(min-width:640px){.btn-ghost{padding:.5rem 1rem;font-size:.875rem}}
+    .btn-ghost:hover{background:#fff;border-color:var(--border)}
+    .btn-ghost.active{background:#fff;border-color:var(--border);color:var(--primary);font-weight:600}
+    .btn-primary{padding:.375rem .75rem;border-radius:.75rem;background:var(--primary);color:#fff;font-size:.75rem;font-weight:500;transition:background .15s}
+    @media(min-width:640px){.btn-primary{padding:.5rem 1.25rem;font-size:.875rem}}
+    .btn-primary:hover{background:var(--primary-dark)}
+
+    /* Hero */
+    .hero{padding:2rem 0 1.5rem;text-align:center}
+    @media(min-width:768px){.hero{padding:3rem 0 2rem}}
+    .hero-eyebrow{font-size:.625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+    @media(min-width:640px){.hero-eyebrow{font-size:.75rem}}
+    .hero-title{font-family:var(--font-display);font-size:1.875rem;font-weight:700;line-height:1.15;margin-top:.5rem}
+    @media(min-width:640px){.hero-title{font-size:2.25rem}}
+    @media(min-width:768px){.hero-title{font-size:2.75rem}}
+    .hero-desc{font-size:.875rem;color:var(--muted);margin-top:.75rem;line-height:1.7;max-width:36rem;margin-left:auto;margin-right:auto}
+    @media(min-width:640px){.hero-desc{font-size:1rem}}
+    .badges{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-top:1rem;font-size:.688rem}
+    @media(min-width:640px){.badges{font-size:.75rem}}
+    .badges span{padding:.375rem .875rem;border-radius:9999px;background:#fff;border:1px solid var(--border)}
+    .hero-cta{display:flex;flex-direction:column;gap:.5rem;margin-top:1.25rem;max-width:28rem;margin-left:auto;margin-right:auto}
+    @media(min-width:640px){.hero-cta{flex-direction:row;gap:.75rem;justify-content:center;max-width:none}}
+    .btn-accent{padding:.625rem 1.5rem;border-radius:.75rem;background:var(--accent);color:#fff;font-weight:600;font-size:.875rem;transition:background .15s;text-align:center}
+    .btn-accent:hover{background:var(--accent-dark)}
+    .btn-outline{padding:.625rem 1.5rem;border-radius:.75rem;background:#fff;border:1px solid var(--border);font-weight:500;font-size:.875rem;text-align:center}
+    .btn-outline:hover{background:var(--bg)}
+
+    /* TOC */
+    .toc{background:#fff;border:1px solid var(--border);border-radius:1rem;padding:1.25rem;margin-top:1.5rem;box-shadow:var(--shadow)}
+    @media(min-width:640px){.toc{padding:1.5rem}}
+    .toc h2{font-family:var(--font-display);font-size:1.125rem;font-weight:700}
+    @media(min-width:640px){.toc h2{font-size:1.25rem}}
+    .toc-group{margin-top:1rem}
+    .toc-group-name{font-size:.688rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent)}
+    .toc-group-desc{font-size:.75rem;color:var(--muted);margin:.125rem 0 .5rem}
+    @media(min-width:640px){.toc-group-desc{font-size:.813rem}}
+    .toc-grid{display:grid;grid-template-columns:1fr;gap:.5rem}
+    @media(min-width:640px){.toc-grid{grid-template-columns:repeat(2,1fr);gap:.625rem}}
+    .toc-link{display:flex;align-items:center;gap:.625rem;border:1px solid var(--border);border-radius:.75rem;padding:.625rem .75rem;font-size:.813rem;font-weight:600;transition:all .15s}
+    @media(min-width:640px){.toc-link{font-size:.875rem}}
+    .toc-link:hover{border-color:var(--primary);box-shadow:var(--shadow-md)}
+    .toc-link:hover .toc-label{color:var(--primary)}
+    .toc-no{flex-shrink:0;width:1.75rem;height:1.75rem;border-radius:9999px;background:var(--primary);color:#fff;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+    .toc-no.star{background:var(--accent)}
+
+    /* Chapters */
+    .chapter{background:#fff;border:1px solid var(--border);border-radius:1rem;padding:1.25rem;margin-top:1.25rem;box-shadow:var(--shadow);scroll-margin-top:5rem}
+    @media(min-width:640px){.chapter{padding:2rem;margin-top:1.5rem}}
+    .chapter-head{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:1rem}
+    .chapter-no{flex-shrink:0;width:2.25rem;height:2.25rem;border-radius:9999px;background:var(--primary);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:1rem}
+    .chapter-no.star{background:var(--accent)}
+    .chapter-group{font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent)}
+    @media(min-width:640px){.chapter-group{font-size:.688rem}}
+    .chapter-title{font-family:var(--font-display);font-size:1.25rem;font-weight:700;line-height:1.3}
+    @media(min-width:640px){.chapter-title{font-size:1.5rem}}
+    .chapter-body{font-size:.875rem;line-height:1.75;color:#44403C}
+    @media(min-width:640px){.chapter-body{font-size:.938rem}}
+    .chapter-body p{margin-bottom:.75rem}
+    .chapter-body b,.chapter-body strong{color:var(--text)}
+    .chapter-body h3{font-size:1rem;font-weight:700;color:var(--text);margin:1.25rem 0 .5rem}
+    @media(min-width:640px){.chapter-body h3{font-size:1.063rem}}
+    .chapter-body ul,.chapter-body ol{margin:0 0 .75rem 1.25rem}
+    .chapter-body li{margin-bottom:.375rem}
+    .chapter-body code{font-family:var(--font-mono);font-size:.75rem;background:var(--bg);border:1px solid var(--border);border-radius:.375rem;padding:.125rem .375rem;word-break:break-all}
+    .mono{font-family:var(--font-mono);font-size:.813rem}
+
+    .note{border-radius:.75rem;padding:.75rem 1rem;margin:.875rem 0;font-size:.813rem;line-height:1.7;background:rgba(27,94,79,.06);border:1px solid rgba(27,94,79,.2)}
+    @media(min-width:640px){.note{font-size:.875rem}}
+    .note-good{background:rgba(21,128,61,.06);border-color:rgba(21,128,61,.25)}
+    .note-warn{background:rgba(200,149,46,.08);border-color:rgba(200,149,46,.35)}
+    .example{border-radius:.75rem;padding:1rem;margin:.875rem 0;font-size:.813rem;line-height:1.7;background:#fff;border:2px solid rgba(27,94,79,.2)}
+    @media(min-width:640px){.example{font-size:.875rem}}
+    .example-title{font-weight:700;color:var(--primary);margin-bottom:.5rem}
+    .example hr{border:none;border-top:1px solid var(--border);margin:.375rem 0}
+    .menu-box{border-radius:.75rem;border:1px solid var(--border);overflow:hidden;margin:.875rem 0}
+    .menu-box-inner{padding:1rem;font-size:.75rem;line-height:1.9}
+    @media(min-width:640px){.menu-box-inner{font-size:.875rem}}
+    .menu-box-inner p{margin-bottom:.25rem}
+    .badge-pro{font-size:.563rem;background:rgba(200,149,46,.15);color:var(--accent-dark);padding:.125rem .375rem;border-radius:.375rem;font-weight:700;vertical-align:middle}
+    .formula{border-radius:.75rem;background:#fff;border:2px solid rgba(27,94,79,.2);padding:1rem;text-align:center;margin:.875rem 0;font-size:.75rem;line-height:2}
+    @media(min-width:640px){.formula{font-size:.875rem}}
+    .formula .big{font-size:1rem;font-weight:700;color:var(--primary)}
+    @media(min-width:640px){.formula .big{font-size:1.25rem}}
+    .formula .dim{font-size:.688rem;color:var(--muted)}
+    @media(min-width:640px){.formula .dim{font-size:.75rem}}
+    .formula .hl{color:var(--accent-dark)}
+
+    .table-wrap{overflow-x:auto;border-radius:.75rem;border:1px solid var(--border);margin:.875rem 0}
+    table.classic{width:100%;border-collapse:collapse;font-size:.75rem;background:#fff}
+    @media(min-width:640px){table.classic{font-size:.875rem}}
+    table.classic th{background:var(--bg);text-align:left;padding:.625rem .75rem;font-weight:700;white-space:nowrap}
+    table.classic td{padding:.625rem .75rem;border-top:1px solid var(--border);vertical-align:top}
+    table.classic td .sub{display:block;font-size:.625rem;color:var(--muted);font-family:var(--font-mono)}
+    @media(min-width:640px){table.classic td .sub{font-size:.688rem}}
+
+    .plan-grid{display:grid;grid-template-columns:1fr;gap:.75rem;margin:.875rem 0}
+    @media(min-width:640px){.plan-grid{grid-template-columns:repeat(2,1fr)}}
+    .plan{border-radius:.75rem;border:2px solid var(--border);padding:1rem;font-size:.813rem}
+    @media(min-width:640px){.plan{font-size:.875rem}}
+    .plan.pro{border-color:var(--accent);background:rgba(200,149,46,.05)}
+    .plan-title{font-family:var(--font-display);font-weight:700;text-align:center;font-size:1rem}
+    .plan ul{margin:.75rem 0 0 1.125rem;line-height:1.9}
+
+    .prevnext{display:flex;flex-direction:column;gap:.5rem;margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border)}
+    @media(min-width:640px){.prevnext{flex-direction:row;justify-content:space-between}}
+    .prevnext a{font-size:.813rem;font-weight:600;color:var(--primary);border:1px solid var(--border);border-radius:.75rem;padding:.625rem .875rem;text-align:center}
+    @media(min-width:640px){.prevnext a{font-size:.875rem}}
+    .prevnext a:hover{border-color:var(--primary);background:rgba(27,94,79,.05)}
+    .prevnext .only-next{margin-left:auto}
+
+    /* CTA */
+    .cta-section{padding:2rem 0}
+    @media(min-width:768px){.cta-section{padding:3rem 0}}
+    .cta-box{border-radius:1rem;background:var(--primary);color:#fff;padding:1.5rem;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:1rem;text-align:center}
+    @media(min-width:768px){.cta-box{flex-direction:row;padding:2.5rem;gap:1.5rem;text-align:left}}
+    .cta-title{font-family:var(--font-display);font-size:1.25rem;font-weight:700}
+    @media(min-width:640px){.cta-title{font-size:1.5rem}}
+    .cta-desc{color:rgba(255,255,255,.8);margin-top:.25rem;font-size:.875rem}
+    @media(min-width:640px){.cta-desc{font-size:1rem}}
+    .cta-buttons{display:flex;flex-direction:column;gap:.5rem;width:100%}
+    @media(min-width:640px){.cta-buttons{flex-direction:row;gap:.75rem;width:auto}}
+    .cta-box .btn-accent{width:100%}
+    @media(min-width:640px){.cta-box .btn-accent{width:auto}}
+    .btn-white{padding:.625rem 1.5rem;border-radius:.75rem;background:#fff;color:var(--primary);font-weight:600;font-size:.875rem;text-align:center;width:100%}
+    @media(min-width:640px){.btn-white{width:auto}}
+    .footer{text-align:center;font-size:.625rem;color:#A8A29E;margin-top:1rem;line-height:1.8}
+    @media(min-width:640px){.footer{font-size:.75rem;margin-top:1.5rem}}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner" style="max-width:56rem">
+      <a href="/" class="logo">
+        <img src="/logo%20web%20dashboard%20catatduit.png" alt="CatatDuit" style="width:2rem;height:2rem;border-radius:.75rem;object-fit:contain" />
+        <span class="logo-text">CatatDuit</span>
+      </a>
+      <nav class="nav">
+        <a href="/tutorial" class="btn-ghost active">Tutorial</a>
+        <a href="/login" class="btn-ghost">Masuk</a>
+        <a href="/register" class="btn-primary">Daftar Gratis</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <p class="hero-eyebrow">Tutorial • Gratis tanpa login</p>
+      <h1 class="hero-title">Panduan Lengkap CatatDuit</h1>
+      <p class="hero-desc">Mulai dari bab pertama, atau loncat ke yang kamu butuhkan. Tutorial dipecah per bab supaya ringan dibaca dan mudah dilompati. Setiap bab berdiri sendiri.</p>
+      <div class="badges"><span>📖 11 bab</span><span>🧮 Contoh perhitungan zakat</span><span>⏱️ ±2 menit per bab</span><span>🆓 Tanpa login</span></div>
+      <div class="hero-cta">
+        <a href="#pendahuluan" class="btn-accent">Mulai dari Bab 1 →</a>
+        <a href="/register" class="btn-outline">Daftar Gratis</a>
+      </div>
+    </section>
+
+    <!-- Daftar Isi -->
+    <nav class="toc" aria-label="Daftar isi tutorial">
+      <h2>Daftar Isi</h2>
+
+      <div class="toc-group">
+        <p class="toc-group-name">Mulai di Sini</p>
+        <p class="toc-group-desc">Kenalan dengan CatatDuit dan pahami cara berpikir akuntansi dalam 4 konsep sederhana.</p>
+        <div class="toc-grid">
+          <a class="toc-link" href="#pendahuluan"><span class="toc-no star">★</span><span class="toc-label">Pendahuluan</span></a>
+          <a class="toc-link" href="#memulai"><span class="toc-no">0</span><span class="toc-label">Memulai: Daftar &amp; Login</span></a>
+          <a class="toc-link" href="#konsep-dasar"><span class="toc-no">✦</span><span class="toc-label">Konsep Dasar Akuntansi</span></a>
+        </div>
+      </div>
+
+      <div class="toc-group">
+        <p class="toc-group-name">Penggunaan Harian</p>
+        <p class="toc-group-desc">Inti pekerjaan harianmu: kelola kantong uang, catat transaksi, baca laporan.</p>
+        <div class="toc-grid">
+          <a class="toc-link" href="#akun"><span class="toc-no">1</span><span class="toc-label">Akun: Kantong Uang &amp; Kategori</span></a>
+          <a class="toc-link" href="#transaksi"><span class="toc-no">2</span><span class="toc-label">Mencatat Transaksi (Jurnal)</span></a>
+          <a class="toc-link" href="#laporan"><span class="toc-no">3</span><span class="toc-label">Laporan Keuangan</span></a>
+        </div>
+      </div>
+
+      <div class="toc-group">
+        <p class="toc-group-name">Zakat</p>
+        <p class="toc-group-desc">Keunggulan utama CatatDuit — zakat maal dihitung sendiri dari pembukuanmu.</p>
+        <div class="toc-grid">
+          <a class="toc-link" href="#zakat-maal"><span class="toc-no">4</span><span class="toc-label">Zakat Maal Otomatis</span></a>
+          <a class="toc-link" href="#nishab-haul"><span class="toc-no">5</span><span class="toc-label">Nishab &amp; Haul</span></a>
+        </div>
+      </div>
+
+      <div class="toc-group">
+        <p class="toc-group-name">Lainnya</p>
+        <p class="toc-group-desc">Cerita alur lengkap, fitur Pro, dan jawaban pertanyaan yang sering ditanyakan.</p>
+        <div class="toc-grid">
+          <a class="toc-link" href="#alur-lengkap"><span class="toc-no">6</span><span class="toc-label">Alur Lengkap dari Awal</span></a>
+          <a class="toc-link" href="#pro"><span class="toc-no">7</span><span class="toc-label">Fitur Pro &amp; Langganan</span></a>
+          <a class="toc-link" href="#faq"><span class="toc-no">?</span><span class="toc-label">FAQ</span></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bab ★ Pendahuluan -->
+    <section class="chapter" id="pendahuluan">
+      <div class="chapter-head">
+        <span class="chapter-no star">★</span>
+        <div><p class="chapter-group">Mulai di Sini</p><h2 class="chapter-title">Pendahuluan</h2></div>
+      </div>
+      <div class="chapter-body">
+        <p><b>CatatDuit</b> adalah aplikasi pembukuan keuangan personal (dan usaha kecil-kecilan) yang punya satu keunggulan yang tidak dimiliki aplikasi pencatat keuangan biasa: <b>zakat maal dihitung otomatis dari pembukuanmu sendiri</b>. Kamu cukup mencatat uang masuk dan keluar seperti biasa — sisanya (laporan keuangan, kekayaan bersih, batas wajib zakat, sampai countdown haul 354 hari) dihitung sistem.</p>
+        <p>Untuk siapa tutorial ini?</p>
+        <ul>
+          <li>Kamu yang <b>belum pernah belajar akuntansi</b> dan tidak tahu arti debet/kredit.</li>
+          <li>Kamu yang sudah pakai aplikasi catat keuangan lain tapi <b>bingung sendiri berapa zakat yang wajib dibayar</b>.</li>
+          <li>Pemilik usaha kecil (toko online, jualan makanan, jasa freelance) yang ingin pembukuan rapi <b>sekalian siap zakat</b>.</li>
+        </ul>
+        <div class="note note-good"><b>Kabar baiknya:</b> kamu tidak perlu memahami teori akuntansi dulu untuk mulai. Bab Konsep Dasar boleh dilewati — form input CatatDuit sudah otomatis membuat pencatatan yang benar. Bab-bab setelahnya baru menjelaskan <i>mengapa</i> sistem bekerja begitu.</div>
+        <p>Seluruh tutorial ini <b>publik dan gratis</b> dibaca tanpa login. Kamu bisa loncat ke bab mana pun lewat daftar isi di atas.</p>
+      </div>
+      <div class="prevnext"><span></span><a class="only-next" href="#memulai">Berikutnya: Memulai: Daftar &amp; Login →</a></div>
+    </section>
+
+    <!-- Bab 0 Memulai -->
+    <section class="chapter" id="memulai">
+      <div class="chapter-head">
+        <span class="chapter-no">0</span>
+        <div><p class="chapter-group">Mulai di Sini</p><h2 class="chapter-title">Memulai: Daftar &amp; Login</h2></div>
+      </div>
+      <div class="chapter-body">
+        <h3>Daftar akun (gratis)</h3>
+        <ol>
+          <li>Buka tombol <b>“Daftar Gratis”</b> di pojok kanan atas situs.</li>
+          <li>Isi <b>nama lengkap</b>, <b>email aktif</b>, dan <b>password</b> (minimal 6 karakter).</li>
+          <li>Klik daftar. Beberapa saat kemudian kamu otomatis masuk ke dashboard.</li>
+          <li>(Opsional) Jika kamu punya kode referral teman seperti <code>/register?ref=ABC123</code>, buka link itu dulu sebelum mendaftar — kode tersimpan otomatis di browser.</li>
+        </ol>
+        <h3>Login &amp; halaman pertama</h3>
+        <p>Setelah masuk, kamu dibawa ke <b>Dashboard</b> (menu <b>Beranda</b>). Awalnya masih kosong karena belum ada data — itu normal. Tugas kamu hanya satu: <b>mencatat transaksi pertama di menu Jurnal</b> (dibahas di bab berikutnya).</p>
+        <h3>Struktur menu di dashboard</h3>
+        <div class="menu-box"><div class="menu-box-inner">
+          <p><b>Beranda</b> — ringkasan kekayaan, progres nishab, grafik, aktivitas terakhir.</p>
+          <p><b>Jurnal Transaksi</b> — tempat mencatat semua uang masuk/keluar. <i>Ini menu yang paling sering kamu buka.</i></p>
+          <p><b>Buku Besar</b> <span class="badge-pro">Pro</span> — riwayat transaksi per akun.</p>
+          <p><b>Laporan Keuangan</b> — Arus Kas <span class="badge-pro">Pro</span>, Laba Rugi <span class="badge-pro">Pro</span>, Neraca (gratis).</p>
+          <p><b>Zakat</b> — Zakat Maal &amp; Nishob/Haul, inti keunggulan CatatDuit.</p>
+          <p><b>Pengaturan</b> — profil, kelola akun, langganan, afiliasi, keamanan.</p>
+          <p><b>Tutorial</b> — halaman tutorial ini, selalu bisa dibuka ulang dari dashboard.</p>
+          <p><b>Customer Care</b> — kirim pertanyaan/tiket langsung ke admin.</p>
+        </div></div>
+        <h3>Di HP</h3>
+        <p>Di layar kecil, menu tampil sebagai navigasi bawah (Beranda, Jurnal, Neraca, Zakat, Saya) dan menu lengkap ada di tombol ☰ di pojok kiri atas. Semua halaman didesain mobile-first, jadi nyaman dipakai mencatat sambil jualan.</p>
+      </div>
+      <div class="prevnext"><a href="#pendahuluan">← Sebelumnya: Pendahuluan</a><a href="#konsep-dasar">Berikutnya: Konsep Dasar Akuntansi →</a></div>
+    </section>
+
+    <!-- Bab ✦ Konsep Dasar -->
+    <section class="chapter" id="konsep-dasar">
+      <div class="chapter-head">
+        <span class="chapter-no">✦</span>
+        <div><p class="chapter-group">Mulai di Sini</p><h2 class="chapter-title">Konsep Dasar Akuntansi</h2></div>
+      </div>
+      <div class="chapter-body">
+        <p>Akuntansi sering menakutkan karena istilahnya. Padahal idenya sederhana. Ini 4 konsep yang perlu kamu pegang, tidak lebih:</p>
+        <h3>1. Akun = “kantong” penyimpan</h3>
+        <p>Bayangkan hartamu disimpan di banyak kantong berbeda: dompet tunai, rekening bank, Gopay, emas di lemari, barang dagangan. Setiap kantong itu disebut <b>akun</b>. CatatDuit otomatis menyiapkan <b>42 akun bawaan</b> — kamu tinggal memakai, menambah, atau menghapus sesuai kebutuhanmu.</p>
+        <h3>2. Setiap transaksi menyentuh dua kantong</h3>
+        <p>Uang tidak pernah muncul atau hilang begitu saja — ia <b>pindah</b>. Kalau kamu bayar listrik Rp 200.000, kantong <b>Kas</b> berkurang Rp 200.000 dan kantong <b>Beban Listrik</b> naik Rp 200.000. Satu kejadian, dua kantong. Itulah sebabnya sistem ini disebut <b>double-entry (pencatatan berpasangan)</b>.</p>
+        <h3>3. Debet &amp; Kredit hanyalah “kiri” dan “kanan”</h3>
+        <p>Setiap transaksi dicatat dua baris: satu sisi disebut <b>Debet</b>, satu lagi <b>Kredit</b>, dan nominalnya <b>selalu sama</b>. Debet = kantong yang <b>menerima</b>. Kredit = kantong yang <b>memberi</b>. Tidak ada yang lebih baik atau lebih buruk — keduanya cuma arah perpindahan. Contoh: <i>“Gaji masuk Rp 5 juta”</i> berarti kantong Kas <b>menerima</b> 5 juta (Debet Kas), kantong Pendapatan Gaji <b>memberi</b> 5 juta (Kredit Pendapatan). Selesai — tidak perlu pusing memikirkan lebih jauh, karena CatatDuit yang menyusunnya otomatis dari template.</p>
+        <h3>4. Jurnal → Buku Besar → Laporan</h3>
+        <p>Satu catatan transaksi disebut <b>entri jurnal</b>. Kumpulan entri dikelompokkan per akun menjadi <b>buku besar</b>. Dari buku besar disusun tiga laporan: <b>Laba Rugi</b> (untung/rugi usaha), <b>Arus Kas</b> (uang nyata masuk-keluar), dan <b>Neraca</b> (foto kondisi harta-hutang di satu titik waktu). Di CatatDuit kamu tidak perlu membuat semuanya manual — laporan muncul otomatis dari jurnal yang kamu catat.</p>
+        <div class="note">Rumus ibu dari seluruh akuntansi: <b>Aktiva = Kewajiban + Modal</b>, atau dalam bahasa santai: <i>“semua harta yang kamu punya berasal dari uang sendiri atau uang pinjaman.”</i> Halaman Neraca memeriksa rumus ini otomatis dan menampilkan tanda <b>“Seimbang”</b> kalau pencatatanmu benar.</div>
+      </div>
+      <div class="prevnext"><a href="#memulai">← Sebelumnya: Memulai: Daftar &amp; Login</a><a href="#akun">Berikutnya: Akun: Kantong Uang &amp; Kategori →</a></div>
+    </section>
+
+    <!-- Bab 1 Akun -->
+    <section class="chapter" id="akun">
+      <div class="chapter-head">
+        <span class="chapter-no">1</span>
+        <div><p class="chapter-group">Penggunaan Harian</p><h2 class="chapter-title">Akun: Kantong Uang &amp; Kategori</h2></div>
+      </div>
+      <div class="chapter-body">
+        <p>Akun adalah fondasi semuanya. Sebelum mencatat transaksi, kenali dulu kelompok akun yang sudah disiapkan:</p>
+        <div class="table-wrap"><table class="classic">
+          <thead><tr><th>Kelompok</th><th>Isinya</th><th>Masuk Zakat?</th></tr></thead>
+          <tbody>
+            <tr><td><b>Kas</b><span class="sub">kas</span></td><td>Uang tunai fisik di dompet/safe</td><td>Ya</td></tr>
+            <tr><td><b>Tabungan</b><span class="sub">tabungan</span></td><td>Tabungan &amp; giro di bank (BSI, Jago Syariah, dll.)</td><td>Ya</td></tr>
+            <tr><td><b>E-Money</b><span class="sub">emoney</span></td><td>Gopay, DANA, ShopeePay, OVO, LinkAja, Flazz/TapCash</td><td>Ya</td></tr>
+            <tr><td><b>Piutang</b><span class="sub">piutang</span></td><td>Uang orang lain yang wajib dikembalikan ke kamu</td><td>Ya</td></tr>
+            <tr><td><b>Persediaan</b><span class="sub">persediaan</span></td><td>Barang dagangan yang akan dijual</td><td>Ya</td></tr>
+            <tr><td><b>Emas/Perak</b><span class="sub">emas</span></td><td>Emas/perak investasi, dinar &amp; dirham</td><td>Ya</td></tr>
+            <tr><td><b>Investasi</b><span class="sub">investasi</span></td><td>Syirkah / partnership — patungan usaha yang hasilnya dibagi sesuai akad</td><td>Lewat Penyesuaian Manual</td></tr>
+            <tr><td><b>Aset Tetap</b><span class="sub">aktiva_tetap</span></td><td>Tanah, rumah, mobil, motor, peralatan usaha</td><td>Tidak (bukan zakat-able)</td></tr>
+            <tr><td><b>Hutang Jatuh Tempo</b><span class="sub">hutang jatuh tempo</span></td><td>Kewajiban yang harus segera dibayar: hutang ke supplier yang jatuh tempo, pinjaman tanpa bunga yang waktunya tiba</td><td>Mengurangi zakat</td></tr>
+            <tr><td><b>Hutang Lain</b><span class="sub">hutang</span></td><td>Hutang ke supplier yang belum jatuh tempo, pinjaman tanpa bunga, pinjaman lain yang sesuai syariah</td><td>Tidak mengurangi zakat</td></tr>
+            <tr><td><b>Modal</b><span class="sub">modal</span></td><td>Modal awal, prive, laba ditahan</td><td>Tidak</td></tr>
+            <tr><td><b>Pendapatan</b><span class="sub">pendapatan</span></td><td>Penjualan, gaji, bagi hasil investasi</td><td>Tidak (bukan harta)</td></tr>
+            <tr><td><b>Beban</b><span class="sub">beban</span></td><td>Operasional, listrik, transport, zakat dibayar, sedekah</td><td>Tidak (bukan harta)</td></tr>
+          </tbody>
+        </table></div>
+        <h3>42 akun bawaan, langsung siap pakai</h3>
+        <p>Saat akunmu dibuat, sistem otomatis menanamkan 42 akun standar: 5 tabungan bank, 6 e-money, 2 piutang, 2 persediaan, emas &amp; perak, syirkah/partnership, 5 aset tetap, 4 hutang, modal, 4 pendapatan, dan 8 beban. Tidak perlu setup apa-apa — cukup pakai yang sesuai.</p>
+        <h3>Cara menambah / mengedit / menghapus akun</h3>
+        <ol>
+          <li>Buka <b>Pengaturan → Kelola Akun</b>.</li>
+          <li>Isi nama akun baru, pilih kelompok (Kas, Tabungan, Piutang, dst.), klik <b>Tambah</b>. Contoh: <i>“E-Money - Paylang”</i> dengan kelompok E-Money.</li>
+          <li>Untuk mengubah: klik <b>Edit</b> di baris akun, ganti nama atau kelompok, simpan.</li>
+          <li>Untuk menghapus: klik <b>Hapus</b>. Aman untuk akun yang salah buat; akun yang sudah dipakai transaksi sebaiknya tidak dihapus supaya laporan lama tetap utuh.</li>
+        </ol>
+        <div class="note note-warn"><b>Penting:</b> kelompok (type) menentukan apakah akun ikut dihitung zakat. Kantong <i>Kas</i>, <i>Tabungan</i>, <i>E-Money</i>, <i>Piutang</i>, <i>Persediaan</i>, <i>Emas/Perak</i> otomatis dihitung sebagai aset zakat. Kantong <i>Aset Tetap</i> (rumah, mobil) tidak dihitung — sesuai aturan zakat maal. Jadi pastikan akun baru masuk kelompok yang benar.</div>
+        <div class="note"><b>Tips penamaan:</b> gunakan nama yang kamu sendiri langsung paham 6 bulan ke depan: “Tabungan BSI - Operasional Toko”, bukan sekadar “Bank”. Satu akun per rekening nyata — jangan campur beberapa rekening dalam satu akun.</div>
+      </div>
+      <div class="prevnext"><a href="#konsep-dasar">← Sebelumnya: Konsep Dasar Akuntansi</a><a href="#transaksi">Berikutnya: Mencatat Transaksi (Jurnal) →</a></div>
+    </section>
+
+    <!-- Bab 2 Transaksi -->
+    <section class="chapter" id="transaksi">
+      <div class="chapter-head">
+        <span class="chapter-no">2</span>
+        <div><p class="chapter-group">Penggunaan Harian</p><h2 class="chapter-title">Mencatat Transaksi (Jurnal)</h2></div>
+      </div>
+      <div class="chapter-body">
+        <p>Semua pencatatan terjadi di menu <b>Jurnal Transaksi</b>. Klik <b>+ Entri Baru</b> dan kamu akan disambut form yang sudah menyederhanakan akuntansi menjadi 4 langkah: <b>pilih jenis → isi tanggal, nominal, keterangan → pilih kantong kas → simpan</b>.</p>
+        <h3>Template transaksi: pilih, jangan karang sendiri</h3>
+        <p>Kamu tidak diminta memilih debet-kredit manual. Ada <b>11 template</b> transaksi harian; sistem langsung tahu kantong mana yang menerima dan memberi:</p>
+        <div class="table-wrap"><table class="classic">
+          <thead><tr><th>Template</th><th>Debet (menerima)</th><th>Kredit (memberi)</th><th>Dipakai saat</th></tr></thead>
+          <tbody>
+            <tr><td><b>Gaji Masuk</b></td><td>Kas</td><td>Pendapatan Gaji</td><td>Gaji bulanan masuk ke rekening</td></tr>
+            <tr><td><b>Penjualan Tunai</b></td><td>Kas</td><td>Pendapatan Usaha</td><td>Jualan dan uang langsung diterima</td></tr>
+            <tr><td><b>Piutang Baru</b></td><td>Piutang Usaha</td><td>Pendapatan Usaha</td><td>Jualan tapi pembayaran ditagih nanti</td></tr>
+            <tr><td><b>Terima Piutang</b></td><td>Kas</td><td>Piutang</td><td>Pelanggan membayar tagihan lama</td></tr>
+            <tr><td><b>Beli Persediaan</b></td><td>Persediaan</td><td>Kas</td><td>Belanja barang untuk dijual kembali</td></tr>
+            <tr><td><b>Beli Emas</b></td><td>Emas</td><td>Kas</td><td>Nabung emas Antam/dinar</td></tr>
+            <tr><td><b>Beban Operasional</b></td><td>Beban Operasional</td><td>Kas</td><td>Bayar listrik, bensin, makan, dll.</td></tr>
+            <tr><td><b>Bayar Hutang Tempo</b></td><td>Hutang Jatuh Tempo</td><td>Kas</td><td>Mencicil/melunasi hutang</td></tr>
+            <tr><td><b>Pinjam Uang</b></td><td>Kas</td><td>Hutang</td><td>Menerima pinjaman (uang masuk tapi bukan pendapatan)</td></tr>
+            <tr><td><b>Modal Awal</b></td><td>Kas</td><td>Modal Awal</td><td>Menaruh harta sendiri sebagai modal awal pembukuan</td></tr>
+            <tr><td><b>Custom (manual)</b></td><td>pilih sendiri</td><td>pilih sendiri</td><td>Transaksi di luar template</td></tr>
+          </tbody>
+        </table></div>
+        <h3>Langkah mencatat (contoh nyata)</h3>
+        <ol>
+          <li>Klik <b>+ Entri Baru</b>, pilih template <b>“Penjualan Tunai”</b>.</li>
+          <li>Isi tanggal (default hari ini), nominal misal <b>350000</b>, keterangan <i>“Omzet jualan 12 Sep”</i>.</li>
+          <li>Di <b>Akun Kas / Sumber Dana</b>, pilih kantong tempat uang masuk — misal Gopay. Default-nya “Kas On Hand” (uang tunai).</li>
+          <li>Cek <b>Preview Otomatis</b> di bawah form: <span class="mono">Debet: E-Money - Gopay → Kredit: Pendapatan - Penjualan • Rp 350.000</span>.</li>
+          <li>Klik <b>Simpan Transaksi</b>. Muncul notifikasi <i>“Transaksi Kamu Tersimpan”</i> dan baris baru tampil di tabel jurnal.</li>
+        </ol>
+        <h3>Beda transaksi tunai, transfer, dan ditagih</h3>
+        <ul>
+          <li><b>Uang langsung masuk</b> (tunai/transfer/e-money): pakai template <i>Gaji Masuk</i> atau <i>Penjualan Tunai</i>, pilih kantong penerima yang benar.</li>
+          <li><b>Uang akan ditagih</b> (COD tempo, teman minjam untuk jualan): pakai <i>Piutang Baru</i>. Nanti saat dibayar, catat lagi dengan <i>Terima Piutang</i> — jangan dicatat dua kali sebagai pendapatan.</li>
+          <li><b>Uang keluar untuk dibelikan sesuatu yang disimpan</b> (stok barang, emas): pakai <i>Beli Persediaan</i> / <i>Beli Emas</i>. Uang kas berkurang, tapi hartamu bertambah — bukan rugi.</li>
+          <li><b>Transaksi aneh/luar biasa</b>: pakai <i>Custom (manual)</i>, pilih sendiri akun debet &amp; kredit. Preview akan menunjukkan pasangan yang kamu pilih.</li>
+        </ul>
+        <h3>Mengedit, menghapus &amp; cek keseimbangan</h3>
+        <p>Klik ikon ✏️ pada baris jurnal untuk mengubah keterangan/nominal, atau 🗑️ untuk menghapus (akan diminta konfirmasi). Yang salah catat hari ini tidak masalah — perbaiki saja.</p>
+        <p>Di bagian bawah halaman jurnal ada kartu <b>“Jurnal Seimbang”</b>. Karena setiap entri selalu Debet = Kredit, total keduanya pasti sama. Kalau suatu saat tampil <b>“Tidak Seimbang”</b>, berarti ada baris yang terhapus sebagian — cek kembali entri terakhir yang kamu edit.</p>
+        <div class="note note-warn"><b>Batas paket gratis:</b> maksimal <b>100 baris jurnal per bulan</b>. Satu transaksi = 2 baris, jadi kira-kira 50 transaksi/bulan. Untuk kebanyakan orang cukup. Butuh lebih? Lihat bab <b>Fitur Pro &amp; Langganan</b>.</div>
+      </div>
+      <div class="prevnext"><a href="#akun">← Sebelumnya: Akun: Kantong Uang &amp; Kategori</a><a href="#laporan">Berikutnya: Laporan Keuangan →</a></div>
+    </section>
+
+    <!-- Bab 3 Laporan -->
+    <section class="chapter" id="laporan">
+      <div class="chapter-head">
+        <span class="chapter-no">3</span>
+        <div><p class="chapter-group">Penggunaan Harian</p><h2 class="chapter-title">Laporan Keuangan</h2></div>
+      </div>
+      <div class="chapter-body">
+        <p>Laporan muncul otomatis begitu jurnal ada. Ini cara membacanya — cukup paham intinya, tidak perlu jadi akuntan.</p>
+        <h3>Neraca — “foto harta kamu hari ini”</h3>
+        <p>Buka menu <b>Laporan Keuangan → Neraca</b> (gratis). Ada dua kolom: <b>AKTIVA</b> (harta) dan <b>PASIVA</b> (dari mana hartamu berasal: hutang + modal). Tiga hal yang perlu dilihat:</p>
+        <ul>
+          <li><b>TOTAL AKTIVA</b> — total semua kantong hartamu (kas, tabungan, piutang, stok, emas, rumah, mobil…).</li>
+          <li><b>Jumlah Kewajiban</b> — total hutang.</li>
+          <li>Strip hijau di bawah: <b>“Seimbang: Aktiva = Pasiva + Modal”</b> — tanda pembukuanmu sehat. Kalau merah “Tidak seimbang”, ada catatan yang keliru.</li>
+        </ul>
+        <p>Tombol <b>Posisi</b> menampilkan kondisi keseluruhan sampai hari ini; <b>Mutasi Bulan Ini</b> hanya pergerakan bulan berjalan. Tombol <b>Export PDF</b> mencetak laporan via dialog print browser.</p>
+        <h3>Laba Rugi — “untung atau rugi usahamu?”</h3>
+        <p><span class="badge-pro">Pro</span> Laporan ini menjawab: pendapatan dikurangi beban = <b>Laba Bersih</b>. Pendapatan = uang dari menjual barang/jasa. Beban = uang yang keluar untuk menjalankan usaha (bensin, kemasan, listrik). Baca angka <b>LABA BERSIH</b> paling bawah: positif berarti untung, negatif berarti rugi. Bisa dilihat per <b>Keseluruhan</b> atau <b>Bulan Ini</b>.</p>
+        <h3>Arus Kas — “uang nyata masuk dan keluar”</h3>
+        <p><span class="badge-pro">Pro</span> Laba ≠ uang di kas. Kamu bisa “untung di kertas” tapi kehabisan uang tunai. Arus Kas mengelompokkan pergerakan uang nyata menjadi tiga: <b>Operasi</b> (jualan &amp; biaya harian), <b>Investasi</b> (beli emas, peralatan), <b>Pendanaan</b> (pinjam uang, bayar hutang, taruh modal). Angka terpenting: <b>SALDO AKHIR KAS</b> — jumlah uang cair yang benar-benar kamu pegang.</p>
+        <h3>Buku Besar — “riwayat satu kantong”</h3>
+        <p><span class="badge-pro">Pro</span> Ingin tahu semua transaksi yang menyentuh kantong <i>Tabungan BSI</i> sepanjang masa, lengkap dengan saldo berjalan? Buka <b>Buku Besar</b>, pilih akun dari dropdown, dan riwayatnya tampil dengan kolom Debet, Kredit, dan Saldo.</p>
+        <div class="note"><b>Hubungan ketiganya sederhana:</b> Laba Rugi bilang <i>berapa untungmu</i>, Arus Kas bilang <i>berapa uang hidup di kantongmu</i>, dan Neraca bilang <i>seberapa kaya kamu sekarang</i>. Neraca-lah yang menjadi bahan perhitungan zakat — bab berikutnya.</div>
+      </div>
+      <div class="prevnext"><a href="#transaksi">← Sebelumnya: Mencatat Transaksi (Jurnal)</a><a href="#zakat-maal">Berikutnya: Zakat Maal Otomatis →</a></div>
+    </section>
+
+    <!-- Bab 4 Zakat Maal -->
+    <section class="chapter" id="zakat-maal">
+      <div class="chapter-head">
+        <span class="chapter-no">4</span>
+        <div><p class="chapter-group">Zakat</p><h2 class="chapter-title">Zakat Maal Otomatis</h2></div>
+      </div>
+      <div class="chapter-body">
+        <p>Inilah alasan CatatDuit ada. Kamu tidak perlu menghitung zakat dengan kalkulator atau spreadsheet — karena datanya sudah ada di pembukuanmu. Tapi mari pahami dulu <i>kata-katanya</i>, supaya angka di layar tidak terasa ajaib.</p>
+        <h3>Istilah zakat yang wajib kamu kenal</h3>
+        <ul>
+          <li><b>Zakat maal</b> (zakat harta) — zakat atas harta yang kamu simpan satu tahun. Beda dengan zakat fitrah (per jiwa tiap Ramadhan).</li>
+          <li><b>Harta zakat-able</b> — jenis harta yang masuk hitungan zakat: uang tunai, tabungan, e-money, piutang, stok barang dagangan, emas/perak.</li>
+          <li><b>Hutang jatuh tempo</b> — hutang yang wajib dibayar sekarang. Ini <b>mengurangi</b> harta zakatmu.</li>
+          <li><b>Nishab</b> — batas minimal harta supaya wajib zakat. Setara <b>85 gram emas</b> atau <b>595 gram perak</b> (boleh juga 20 dinar / 200 dirham).</li>
+          <li><b>Haul</b> — masa penyimpanan harta selama <b>1 tahun hijriyah = 354 hari</b>. Harta harus bertahan di atas nishab selama haul penuh.</li>
+          <li><b>Kadar zakat</b> — persentase yang dikeluarkan: <b>2,5%</b>.</li>
+        </ul>
+        <h3>Rumus yang dipakai sistem</h3>
+        <div class="formula">
+          Kekayaan Bersih = (Kas + Tabungan + E-Money + Piutang + Persediaan + Emas/Perak + <span class="hl">Penyesuaian Aset</span>)<br />
+          − (Hutang Jatuh Tempo + <span class="hl">Penyesuaian Hutang</span>)<br />
+          <span class="big">Zakat = Kekayaan Bersih × 2,5%</span><br />
+          <span class="dim">dengan syarat: Kekayaan Bersih ≥ nishab, dan haul 354 hari terpenuhi</span>
+        </div>
+        <p>Perhatikan: <b>bukan semua harta</b> ikut dihitung. Rumah, mobil, dan alat produksi tidak masuk (mereka bukan harta yang “diperdagangkan”). Sebaliknya, pinjaman jangka panjang yang belum jatuh tempo <b>tidak</b> mengurangi zakat — hanya hutang yang jatuh tempo hari itu.</p>
+        <h3>Halaman Zakat Maal: apa saja yang tampil</h3>
+        <ul>
+          <li><b>Posisi Harta Zakat</b> — tabel dua sisi persis seperti neraca: sisi hijau “Aset Zakat” (jumlah kas, persediaan, piutang) dan sisi merah “Hutang Jatuh Tempo”. Semuanya terisi otomatis dari jurnalmu.</li>
+          <li><b>Kekayaan Bersih Zakat-able</b> — hasil pengurangan keduanya. Angka inilah yang dinilai terhadap nishab.</li>
+          <li><b>Status Nishob</b> — empat pilihan patokan (emas, perak, dinar, dirham) dengan nominal rupiahnya, progress bar “berapa persen hartamu menuju nishab”, dan keterangan apakah sudah wajib zakat.</li>
+          <li><b>Hasil Perhitungan</b> — angka zakat 2,5% + tombol konfirmasi pembayaran. Jika haul belum genap, sistem menampilkan zakat “persiapan” sekaligus tanggal haul berjalan.</li>
+        </ul>
+        <h3>Penyesuaian Manual: untuk harta di luar pembukuan</h3>
+        <p>Tidak semua harta tercatat di jurnal (emas perhiasan di lemari, tabungan di bank lain, piutang tidak resmi). Karena itu di halaman Zakat Maal ada bagian <b>Penyesuaian Manual</b>:</p>
+        <ol>
+          <li><b>Aset:</b> isi nama (mis. <i>“Emas perhiasan 10gr”</i>) dan nominalnya, klik <b>Simpan Aset</b>. Angkanya langsung menambah “Jumlah Aset Zakat”.</li>
+          <li><b>Hutang:</b> isi nama dan nominalnya, klik <b>Simpan Hutang</b>. Menambah “Jumlah Hutang” dan otomatis menurunkan kekayaan bersih.</li>
+          <li>Semua item bisa <b>Edit</b> / <b>Hapus</b> — misal saat emas perhiasan dijual, hapus penyesuaiannya.</li>
+        </ol>
+        <h3>Contoh perhitungan lengkap</h3>
+        <div class="example">
+          <p class="example-title">Contoh: Bu Sari, pedagang online</p>
+          <div class="mono">
+            <p>Kas on hand…………………………Rp 4.000.000</p>
+            <p>Tabungan BSI……………………….Rp 15.000.000</p>
+            <p>Gopay + DANA………………………Rp 1.500.000</p>
+            <p>Stok barang dagang…………..Rp 12.000.000</p>
+            <p>Piutang pelanggan………………Rp 2.500.000</p>
+            <p>Emas perhiasan (penyesuaian) Rp 8.000.000</p>
+            <hr />
+            <p>Jumlah Aset Zakat………………<b>Rp 43.000.000</b></p>
+            <p>Hutang jatuh tempo (pinjaman tanpa bunga) Rp 3.000.000</p>
+            <hr />
+            <p>Kekayaan Bersih……………………<b>Rp 40.000.000</b></p>
+          </div>
+          <p style="margin-top:.75rem">Nishab perak (595 gr × Rp 37.870) = Rp 22.532.650. Kekayaan Rp 40.000.000 <b>lewat nishab</b>, dan haul 354 hari sudah genap. Maka: <b>Rp 40.000.000 × 2,5% = Rp 1.000.000</b> zakat yang wajib dikeluarkan Bu Sari tahun ini. Perhatikan rumah dan mobil tidak ikut dihitung; pinjaman jangka panjang juga tidak mengurangi.</p>
+        </div>
+        <div class="note note-warn"><b>Kenapa angka zakat bisa berubah dari hari ke hari?</b> Karena kekayaan bersih dihitung <i>real-time</i> dari jurnal. Zakat baru “terkunci” wajibnya pada saat haul genap 354 hari — dan yang dinilai adalah kondisi harta di hari itu.</div>
+      </div>
+      <div class="prevnext"><a href="#laporan">← Sebelumnya: Laporan Keuangan</a><a href="#nishab-haul">Berikutnya: Nishab &amp; Haul →</a></div>
+    </section>
+
+    <!-- Bab 5 Nishab & Haul -->
+    <section class="chapter" id="nishab-haul">
+      <div class="chapter-head">
+        <span class="chapter-no">5</span>
+        <div><p class="chapter-group">Zakat</p><h2 class="chapter-title">Nishab &amp; Haul</h2></div>
+      </div>
+      <div class="chapter-body">
+        <p>Menu <b>Zakat → Nishob &amp; Haul</b> di aplikasi adalah ruang kendali aturan zakatmu. Empat bagian di dalamnya:</p>
+        <h3>1. Input Harga Nishob</h3>
+        <p>Nishab dinyatakan dalam gram emas/perak — jadi sistem perlu harga rupiahnya. Isi harga per gram emas, perak, harga 1 dinar, dan 1 dirham sesuai sumber yang kamu percayai (laman harga emas resmi, katalog dinar/dirham), lalu klik <b>Simpan Harga</b>. Kolom yang dibiarkan kosong memakai <b>harga default sistem</b>. Tombol <b>Reset ke Sistem</b> mengembalikan ke harga default kapan pun. Status “Setting Manual Anda” vs “Harga Sistem (Default)” selalu tampil di bawah form.</p>
+        <h3>2. Pilih Patokan Nishob</h3>
+        <p>Empat pilihan: <b>Emas</b> (85 gr), <b>Perak</b> (595 gr), <b>Dinar</b> (20 keping), <b>Dirham</b> (200 keping). Rekomendasi aplikasi adalah <b>yang terendah</b> (biasanya perak) — menurut para ulama, kehati-hatian itu pilihan yang lebih afdhol, karena makin rendah nishab makin banyak orang yang wajib zakat, makin baik. Jika guru/ulama yang kamu ikuti berbeda pendapat, pilih patokan lain, lalu klik <b>Simpan Pilihan Nishab</b>. Pilihan ini dipakai di semua halaman: Dashboard, Zakat Maal, dan Haul.</p>
+        <h3>3. Tracking Harta Menuju Nishab + Kunci Tanggal</h3>
+        <p>Progress bar menunjukkan seberapa dekat kekayaanmu ke nishab. Saat harta <b>menyentuh nishab</b>, tombol <b>Kunci Tanggal</b> menjadi aktif: pilih tanggal harta pertama kali melewati nishab (boleh hari ini, boleh mundur jika harta sudah lama di atas nishab). Dari tanggal itulah <b>haul 354 hari</b> mulai berhitung — tanggal akhirnya dihitung otomatis. Kalau hartamu turun di bawah nishab di tengah jalan, gunakan <b>Lepas Track</b> untuk mereset haul; nanti saat harta kembali ke atas nishab, aplikasi menawarkan untuk mengunci tanggal baru.</p>
+        <h3>4. Haul Aktif (countdown 354 hari)</h3>
+        <p>Lingkaran progress menampilkan <i>hari ke-</i>berapa haulmu berjalan, tanggal mulai, dan tanggal selesai. Saat <b>haul genap 354</b> dan harta masih ≥ nishab, muncul status “Nishab dan haul terpenuhi” plus tombol <b>Konfirmasi Pembayaran Zakat</b>. Perlu diketahui: 354 hari (penanggalan hijriyah) ≈ 11 hari lebih pendek dari tahun masehi 365 hari — itulah kenapa tahun zakatmu bisa bergeser ~11 hari lebih awal tiap tahun. Ini normal dan memang sesuai kaidah.</p>
+        <div class="note"><b>Rangkuman satu kalimat:</b> zakat maal wajib ketika <i>harta zakat-able dikurangi hutang jatuh tempo</i> mencapai nishab <b>dan bertahan</b> selama haul 354 hari — dan yang dikeluarkan adalah 2,5% dari harta tersebut.</div>
+      </div>
+      <div class="prevnext"><a href="#zakat-maal">← Sebelumnya: Zakat Maal Otomatis</a><a href="#alur-lengkap">Berikutnya: Alur Lengkap dari Awal →</a></div>
+    </section>
+
+    <!-- Bab 6 Alur Lengkap -->
+    <section class="chapter" id="alur-lengkap">
+      <div class="chapter-head">
+        <span class="chapter-no">6</span>
+        <div><p class="chapter-group">Lainnya</p><h2 class="chapter-title">Alur Lengkap dari Awal</h2></div>
+      </div>
+      <div class="chapter-body">
+        <p>Merangkum semua bab sebelumnya menjadi cerita satu pengguna, Andi:</p>
+        <ol>
+          <li><b>Daftar gratis</b> dengan email — 1 menit. 42 akun otomatis tersedia.</li>
+          <li><b>Catat modal awal</b>: template <i>Modal Awal</i>, uang yang ia pakai untuk memulai pembukuan.</li>
+          <li><b>Catat hari-hari</b>: tiap malam 2–3 menit — <i>Penjualan Tunai</i> untuk omzet, <i>Beban Operasional</i> untuk bensin &amp; kemasan, <i>Beli Persediaan</i> saat restok.</li>
+          <li><b>Cek Neraca</b> tiap akhir minggu (gratis) — pastikan statusnya “Seimbang”.</li>
+          <li><b>Atur zakat</b>: buka <i>Nishob &amp; Haul</i>, isi harga emas/perak terkini, pilih patokan perak (terendah), <i>Simpan Pilihan Nishab</i>.</li>
+          <li><b>Kunci tanggal nishab</b>: saat kekayaan bersih melewati Rp 22,5 juta, pilih tanggalnya → haul mulai berjalan.</li>
+          <li><b>Isi Penyesuaian Manual</b>: emas perhiasan istri dan tabungan di bank lain yang tidak dicatat di jurnal.</li>
+          <li><b>Tunggu countdown</b>: halaman Zakat Maal menampilkan progres haul tiap hari.</li>
+          <li><b>Hari ke-354</b>: status berubah “Nishab dan haul terpenuhi”, angka zakat 2,5% muncul jelas. Andi menunaikannya lewat amil pilihannya, lalu mencatatnya dengan template <i>Beban - Zakat Dibayar</i> di jurnal.</li>
+          <li><b>Tahun berikutnya</b>: haul baru otomatis dimulai dari tanggal sebelumnya — siklus berulang tanpa setup ulang.</li>
+        </ol>
+        <div class="note note-good">Catatan rutinitas yang dianjurkan: <b>2–3 menit per hari</b> mencatat, <b>10 menit per bulan</b> cek laporan, dan <b>0 menit</b> pusing menghitung zakat.</div>
+      </div>
+      <div class="prevnext"><a href="#nishab-haul">← Sebelumnya: Nishab &amp; Haul</a><a href="#pro">Berikutnya: Fitur Pro &amp; Langganan →</a></div>
+    </section>
+
+    <!-- Bab 7 Pro -->
+    <section class="chapter" id="pro">
+      <div class="chapter-head">
+        <span class="chapter-no">7</span>
+        <div><p class="chapter-group">Lainnya</p><h2 class="chapter-title">Fitur Pro &amp; Langganan</h2></div>
+      </div>
+      <div class="chapter-body">
+        <h3>Apa saja bedanya paket Gratis vs Pro?</h3>
+        <div class="plan-grid">
+          <div class="plan">
+            <p class="plan-title">Gratis — Rp 0</p>
+            <ul>
+              <li>✅ Dashboard, Jurnal, Neraca, Zakat Maal, Nishob &amp; Haul</li>
+              <li>✅ 42 akun bawaan + kelola akun sendiri</li>
+              <li>✅ Penyesuaian manual zakat &amp; tracking haul 354 hari</li>
+              <li>⏳ Maksimal <b>100 baris jurnal/bulan</b> (±50 transaksi)</li>
+              <li>🔒 Terkunci: Buku Besar, Laba Rugi, Arus Kas</li>
+            </ul>
+          </div>
+          <div class="plan pro">
+            <p class="plan-title">Pro <span style="font-size:.75rem;font-weight:400;color:var(--muted)">— buka semua</span></p>
+            <ul>
+              <li>🔓 <b>Buku Besar</b> — riwayat &amp; saldo berjalan per akun</li>
+              <li>🔓 <b>Laba Rugi</b> — pantau untung/rugi usaha per bulan</li>
+              <li>🔓 <b>Arus Kas</b> — laporan uang nyata masuk-keluar</li>
+              <li>🔓 <b>Jurnal unlimited</b> — tanpa batas 100 baris/bulan</li>
+              <li>🔓 Semua fitur gratis tetap aktif</li>
+            </ul>
+          </div>
+        </div>
+        <h3>Harga &amp; cara upgrade</h3>
+        <div class="table-wrap"><table class="classic">
+          <thead><tr><th>Paket</th><th>Harga</th><th>Hemat dibanding 1 bulan</th></tr></thead>
+          <tbody>
+            <tr><td>1 Bulan</td><td class="mono">Rp 17.000</td><td>—</td></tr>
+            <tr><td>3 Bulan <span class="badge-pro" style="background:var(--accent);color:#fff">Populer</span></td><td class="mono">Rp 37.000</td><td>27%</td></tr>
+            <tr><td>6 Bulan</td><td class="mono">Rp 57.000</td><td>44%</td></tr>
+            <tr><td>12 Bulan</td><td class="mono">Rp 97.000</td><td>52%</td></tr>
+          </tbody>
+        </table></div>
+        <p>Ada dua pintu untuk upgrade: menu <b>Pengaturan → Berlangganan</b> di dalam dashboard, atau halaman upgrade yang muncul saat kamu membuka menu terkunci. Pilih durasi → klik <b>Order Now</b> → scan <b>QRIS</b> dengan aplikasi bank/e-money apa pun → pembayaran terverifikasi otomatis dan status Pro langsung aktif (invoice tampil di <b>Pengaturan → Tagihan</b>). Harga terendahnya setara <b>± Rp 560/hari</b> — lebih murah dari parkir motor.</p>
+        <div class="note"><b>Pertimbangan yang jujur:</b> jika kamu hanya mencatat keuangan pribadi sederhana, paket Gratis memang sudah mencukupi — menu yang ada sudah menggambarkan kekayaan dan kewajiban zakatmu. Pro bernilai untuk kamu yang transaksinya padat (&gt;50/bulan) atau ingin membaca tiga laporan lengkap seperti pembukuan kantor.</div>
+      </div>
+      <div class="prevnext"><a href="#alur-lengkap">← Sebelumnya: Alur Lengkap dari Awal</a><a href="#faq">Berikutnya: FAQ →</a></div>
+    </section>
+
+    <!-- Bab ? FAQ -->
+    <section class="chapter" id="faq">
+      <div class="chapter-head">
+        <span class="chapter-no">?</span>
+        <div><p class="chapter-group">Lainnya</p><h2 class="chapter-title">FAQ</h2></div>
+      </div>
+      <div class="chapter-body">
+        <h3>Apakah data keuangan saya aman?</h3>
+        <p>Data setiap pengguna terisolasi di tingkat database (row-level security): hanya akunmu yang bisa membacanya. Password disimpan ter-enkripsi, dan kamu bisa mengakhiri sesi perangkat lain dari Pengaturan → Keamanan.</p>
+        <h3>Apa bedanya zakat maal dan zakat fitrah?</h3>
+        <p>Zakat maal dihitung dari harta (2,5%, wajib setelah nishab + haul 354 hari) dan dihitung otomatis CatatDuit dari pembukuanmu. Zakat fitrah dihitung per jiwa yang berpuasa di Ramadhan (sekitar 2,5 kg beras atau uang senilai), dibayar sebelum Idul Fitri.</p>
+        <h3>Pinjaman jangka panjang saya dihitung mengurangi zakat?</h3>
+        <p>Tidak. Yang mengurangi zakat hanya hutang jatuh tempo (kewajiban yang wajib dibayar dalam waktu dekat), misalnya hutang ke supplier yang jatuh tempo bulan ini. Pinjaman jangka panjang yang belum jatuh tempo tidak masuk hitungan.</p>
+        <h3>Kenapa zakat saya Rp 0 padahal harta banyak?</h3>
+        <p>Ada dua syarat yang dicek sistem: nishab dan haul. Jika progress bar belum 100%, hartamu belum lewat nishab. Jika progress 100% tapi zakat Rp 0, berarti haul belum genap 354 hari — atau tanggal nishab belum dikunci di menu Nishob &amp; Haul.</p>
+        <h3>Bagaimana jika harga emas berubah?</h3>
+        <p>Nishab mengikuti harga terbaru yang terpasang. Cukup perbarui angkanya di Nishob &amp; Haul → Input Harga Nishob lalu simpan; perhitungan di semua halaman langsung menyesuaikan. Tidak yakin dengan angka sendiri? Reset ke Sistem.</p>
+        <h3>Bisa dipakai untuk usaha, bukan hanya pribadi?</h3>
+        <p>Bisa. Stok barang dagangan, piutang pelanggan, dan hutang supplier sudah disediakan sebagai akun bawaan. Pemilik toko online biasanya mencatat omzet via Penjualan Tunai/Piutang Baru, restok via Beli Persediaan, dan membaca Laba Rugi tiap bulan.</p>
+        <h3>Saya salah mencatat transaksi, bagaimana?</h3>
+        <p>Buka Jurnal, cari barisnya, klik ikon edit untuk mengubah nominal/keterangan atau ikon hapus untuk menghapus. Laporan dan angka zakat ikut menyesuaikan otomatis karena semuanya dihitung dari jurnal.</p>
+        <h3>Apakah CatatDuit gratis?</h3>
+        <p>Ada paket gratis selamanya: dashboard, jurnal (maks 100 baris/bulan), neraca, zakat maal, dan tracking haul. Paket Pro mulai Rp 17.000/bulan membuka Buku Besar, Laba Rugi, Arus Kas, dan jurnal unlimited.</p>
+        <h3>Bagaimana cara membayar langganan Pro?</h3>
+        <p>Via QRIS — pilih durasi (1/3/6/12 bulan), klik Order Now, scan QRIS dengan aplikasi bank atau e-money apa pun. Status Pro aktif otomatis setelah pembayaran terverifikasi, invoice tampil di Pengaturan → Tagihan.</p>
+        <h3>Punya pertanyaan lain?</h3>
+        <p>Buka <b>Customer Care</b> di dashboard aplikasi — tiketmu dibaca langsung oleh tim, dan jawaban akan muncul di sana.</p>
+      </div>
+      <div class="prevnext"><a href="#pro">← Sebelumnya: Fitur Pro &amp; Langganan</a><a href="/">Kembali ke Beranda →</a></div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="cta-box">
+        <div>
+          <h3 class="cta-title">Sudah paham? Praktikkan sekarang.</h3>
+          <p class="cta-desc">Daftar 1 menit, catat transaksi pertama, zakat dihitung sendiri.</p>
+        </div>
+        <div class="cta-buttons">
+          <a href="/register" class="btn-accent">Daftar Gratis →</a>
+          <a href="/login" class="btn-white">Saya Sudah Punya Akun</a>
+        </div>
+      </div>
+      <p class="footer">© 2026 CatatDuit by Degriya Partner • Panduan ini diperbarui seiring perkembangan aplikasi.<br/>Tutorial lengkap juga tersedia di aplikasi: <a href="https://cttn.abinezidna.net/docs" style="text-decoration:underline">cttn.abinezidna.net/docs</a></p>
+    </section>
+  </main>
+</body>
+</html>
